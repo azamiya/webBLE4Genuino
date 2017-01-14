@@ -9,6 +9,8 @@
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
     <script src="js/ledBlink.js"></script>
+    <script src="js/servoSlider.js"></script>
+
   </head>
   <body>
 
@@ -26,6 +28,21 @@
             <button id="on"> Led on </button>
             <button id="off"> Led off </button>
           </div>
+
+          <div>
+            <label for="fader">Servo : yaw</label>
+            <input type="range" min="30" max="150" value="90" id="fader" 
+              step="1" oninput="yawVolume(value)">
+            <output for="fader" id="yaw_volume">90</output>
+          </div>
+
+          <div>
+            <label for="fader">Servo : pitch</label>
+            <input type="range" min="30" max="150" value="90" id="fader" 
+              step="1" oninput="pitchVolume(value)">
+            <output for="fader" id="pitch_volume">90</output>
+          </div>
+
           <div class="col-sm-10">
             <div id="logger"></div>  
           </div>
