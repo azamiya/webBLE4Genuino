@@ -8,19 +8,29 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <script src="js/ledBlink.js"></script>
   </head>
   <body>
 
     <section class="page-header">
-      <h1 class="project-name">Led blink</h1>
+      <h1 class="project-name">WebBLE4Genuino : Led blink</h1>
     </section>
 
     <section class="main-content">
-      <h3>
-      <a id="creating-pages-manually" class="anchor" href="#creating-pages-manually" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Live demo</h3>
+      <p><a href="https://github.com/cdra0624/webBLE4Genuino/blob/ada-led-blink/sketch/CurieLedBlink/CurieLedBlink.ino">Sketch : CurieLedBlink</a></p>
 
-      <p><a href="">01. Simple led blink</a></p>
-      <p style="text-decoration: line-through; color: #ccc">02. Servo move by slider</p>
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-2">
+            <button id="search">Search</button>
+            <button id="on"> Led on </button>
+            <button id="off"> Led off </button>
+          </div>
+          <div class="col-sm-10">
+            <div id="logger"></div>  
+          </div>
+        </div>
+      </div>
 
     </section>
 
