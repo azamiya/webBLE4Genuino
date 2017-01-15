@@ -6,23 +6,22 @@ var connectedData = null;
 
 var peer = new Adawarp();
 
-window.onload = function(){
-  displayMyCamera();
-  getMyID();
-  peer.login();
-}
-
 function getMyID() {
   peer.on('open', function(){
     document.getElementById("my-id").innerHTML = peer.id;
   });
 }
 
+var acc = [90, 90];
+
 peer.on('connection', function(conn) {
   connectedData = conn;
   conn.on('data', function(data){
     console.log(data + ", typeof : " + typeof(data));
     document.getElementById("receive_message").innerHTML = data;
+    acc = data.split(",");
+    console.log("yaw : " + acc[0] + ", pitch : " + acc[1]);
+    if(chara) chara.writeValue( new Uint8Array(acc) );
   });
 });
 
