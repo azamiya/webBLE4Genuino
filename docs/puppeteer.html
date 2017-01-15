@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>WebBLE4Genuino</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+    <script src="https://unpkg.com/adawarp@latest/dist/adawarp.js"></script>
+    <script src="js/puppeteer.js"></script>
+    <script src="js/videoChat.js"></script>
+  </head>
+  <body>
+
+    <section class="page-header">
+      <h1 class="project-name">WebBLE&WebRTC : Puppeteer</h1>
+    </section>
+
+    <section class="main-content">
+      <div>
+        <video id="my-video" style="width: 300px;" autoplay muted></video>
+        <video id="peer-video" style="width: 300px;" autoplay></video>
+      </div>
+
+      <div>
+        <p>MyID: <span id="my-id">-</span></p>
+        <p>PeerID: <span id="peer-id">-</span></p>
+      </div>
+
+      <div>
+        <input type="text" placeholder="PeerID" id="peer-id-input">
+        <button onclick="callStart()">Start Call</button>
+        <button onclick="callEnd()">End Call</button>
+      </div>
+
+      <div>Received data : <span id="receive_message">---</span></div>
+
+      <div class="container">
+        <div class="row">
+          <div>
+            <label for="fader">Servo : yaw</label>
+            <input type="range" min="30" max="150" value="90" id="fader" 
+              step="1" oninput="yawVolume(value)">
+            <output for="fader" id="yaw_volume">90</output>
+          </div>
+
+          <div>
+            <label for="fader">Servo : pitch</label>
+            <input type="range" min="30" max="150" value="90" id="fader" 
+              step="1" oninput="pitchVolume(value)">
+            <output for="fader" id="pitch_volume">90</output>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
