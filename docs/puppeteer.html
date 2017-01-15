@@ -21,10 +21,6 @@
 
     <section class="main-content">
       <div>
-        <video id="peer-video" style="width: 300px;" autoplay></video>
-      </div>
-
-      <div>
         <p>MyID: <span id="my-id">-</span></p>
         <p>PeerID: <span id="peer-id">-</span></p>
       </div>
@@ -35,7 +31,9 @@
         <button onclick="callEnd()">End Call</button>
       </div>
 
-      <div>Received data : <span id="receive_message">---</span></div>
+      <div>
+        <video id="peer-video" style="width: 300px;" autoplay></video>
+      </div>
 
       <div class="container">
         <div class="row">
